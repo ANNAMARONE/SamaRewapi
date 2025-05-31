@@ -6,10 +6,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Spatie\Permission\Traits\HasRoles;
 use Tymon\JWTAuth\Contracts\JWTSubject;
 
 class User extends Authenticatable implements JWTSubject
 {
+    use HasRoles;
+    use Notifiable;
     /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable;
 
@@ -19,7 +22,18 @@ class User extends Authenticatable implements JWTSubject
      * @var list<string>
      */
     protected $guarded = [];
-
+  public function signalements(){
+    return $this->hasMany(Signalement::class);
+}
+public function resolutions(){
+    return $this->hasMany(Resolution::class);
+}
+public function votes(){
+    return $this->hasMany(Vote::class);
+}
+public function commentaires(){
+    return $this->hasMany(Commentaire::class);
+}
     /**
      * The attributes that should be hidden for serialization.
      *

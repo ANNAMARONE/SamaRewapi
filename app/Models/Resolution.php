@@ -9,4 +9,13 @@ class Resolution extends Model
 {
     /** @use HasFactory<\Database\Factories\ResolutionFactory> */
     use HasFactory;
+     protected $guarded=[];
+      
+     public function user()
+     {
+         return $this->belongsTo(User::class, 'users_id');
+     }
+     public function signalement(){
+        return $this->belongsTo(Signalement::class);
+     }
 }

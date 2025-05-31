@@ -1,0 +1,15 @@
+[90m= [39m[34;4mApp\Models\User[39;24m {#6275
+    [34mid[39m: [35m1[39m,
+    [34mnom[39m: "[32mNouveauNom[39m",
+    [34mprenom[39m: "[32mNouveauPrénom[39m",
+    [34memail[39m: "[32mnouvel.email@example.com[39m",
+    #[33mpassword[39m: "[32m$2y$12$.Q13.8YJU54BzveSv1UATuN3Tx6tjsMR7A3EgR.gHrCu5brwRHwPq[39m",
+    [34mtelephone[39m: "[32m0987654321[39m",
+    [34mrole[39m: "[32madmin[39m",
+    [34madresse[39m: "[32mNouvelle Adresse[39m",
+    [34memail_verified_at[39m: [36mnull[39m,
+    #[33mremember_token[39m: [36mnull[39m,
+    [34mcreated_at[39m: "[32m2025-05-04 19:14:09[39m",
+    [34mupdated_at[39m: "[32m2025-05-04 21:06:04[39m",
+  }
+
