@@ -9,4 +9,8 @@ class Categorie extends Model
 {
     /** @use HasFactory<\Database\Factories\CategorieFactory> */
     use HasFactory;
+protected $guarded=[];
+ public function signalements(){
+    return $this->hasMany(Signalement::class);
+ }
 }

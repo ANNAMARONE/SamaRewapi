@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('nom');
             $table->string('prenom');
             $table->string('email')->unique();
-            $table->string('mot_de_passe');
+            $table->string('password');
             $table->string('telephone')->nullable();
             $table->enum('role', ['citoyen', 'autorite', 'admin'])->default('citoyen'); // Pour info, Spatie gère les vrais rôles
             $table->string('adresse')->nullable();
